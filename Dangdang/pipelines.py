@@ -15,7 +15,7 @@ from Dangdang.items import CommentItem
 class DangdangPipeline(object):
     def process_item(self, item, spider):
         # 连接数据库
-        conn = pymysql.connect(host="localhost",user="root",passwd='940212',db="dd",use_unicode=True, charset="utf8")
+        conn = pymysql.connect(host="localhost",user="root",passwd='******',db="dd",use_unicode=True, charset="utf8")
         cur = conn.cursor()             # 用来获得python执行Mysql命令的方法,也就是我们所说的操作游标
         print("mysql connect success")  # 测试语句，这在程序执行时非常有效的理解程序是否执行到这一步
         # 存储当当商品信息的逻辑
