@@ -30,7 +30,7 @@ CONCURRENT_REQUESTS = 32
 DOWNLOAD_DELAY = 0
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16  # 对单个网站进行并发请求的最大值
-CONCURRENT_REQUESTS_PER_IP = 32  # 对单个IP进行并发请求的最大值
+CONCURRENT_REQUESTS_PER_IP = 16  # 对单个IP进行并发请求的最大值
 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False  #禁用Cookie(默认情况下启用)
@@ -50,10 +50,10 @@ COOKIES_ENABLED = False  #禁用Cookie(默认情况下启用)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     # 'Dangdang.middlewares.DangdangDownloaderMiddleware': 543,
-    'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-    'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+    # 'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+    # 'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
-    'Dangdang.middlewares.RandomUserAgentMiddleWare': 400,
+    # 'Dangdang.middlewares.RandomUserAgentMiddleWare': 400,
 }
 ROTATING_PROXY_LIST_PATH = '/home/geng/Projects/Dangdang/proxy.txt'
 
